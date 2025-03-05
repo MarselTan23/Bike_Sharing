@@ -1,8 +1,7 @@
-Berikut adalah ibrary yang saya gunakan untuk mengerjakan projek ini :
-
 numpy
 pandas
 scipy
 matplotlib
 seaborn
 jupyter
+streamlit
