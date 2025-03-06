@@ -48,6 +48,9 @@ fig, ax = plt.subplots(figsize=(25, 5))
 # Hitung nilai jumlah penyewa sepeda per bulan dari kolom 'cnt' di DataFrame 'day_df'
 month_counts_day = main_df_days['cnt'].groupby(main_df_days['month']).sum()
 
+# Ubah indeks angka bulan menjadi nama bulan
+month_counts_day.index = month_counts_day.index.map(month_names)
+
 # Buat scatter plot untuk jumlah penyewa sepeda per bulan dari 'day_df'
 ax.scatter(month_counts_day.index, month_counts_day.values, c="#90CAF9", s=50, marker='o', label='Jumlah Penyewaan per Bulan')
 
